@@ -1,11 +1,11 @@
 # Basic Employee Onboarding (AD)(RBAC)
 
 ## Problem Statement
-[Provide 3 to 5 sentences describing what was broken at Northstar Medical Group. Mention the MSP mismanagement, lack of structure, manual processes, and HIPAA risks that existed before your project.]
+Northstar Medical Group is a fictional fast-growing healthcare company that delegated its identity lifecycle workflow to a third-party MSP. This worked fine while the company was small, but as Northstar grew, the gaps became obvious. There was no RBAC policy in place, so access was assigned ad-hoc with no consistent standard tied to job role. There were no audit trails to track who had access to what or why. Combined with the fact that Northstar handles protected health information, this created real HIPAA compliance risk that could expose the company to significant fines in an audit.
+
 
 ## Solution Overview
-[Provide 4 to 6 sentences describing what you built and how it solved the problem. Cover the new domain creation, the structural OU design, the security groups, the flat RBAC model, and how user provisioning was secured.]
-
+I built a basic employee onboarding pipeline in Active Directory to replace the ad-hoc process. This started with creating a new domain (NMG.com) as the foundation, then designing an organizational unit structure that separated departments so access could be managed by group rather than by individual. I set up an RBAC matrix using security groups tied to each OU, ensuring users were granted access only according to their role, nothing more and nothing less. To validate the model, I simulated a mock support ticket where a user had been provisioned the wrong level of access, then used the OU and group structure to trace the issue back to its root cause and correct it. The result is a provisioning process where adding a user to the right OU and group automatically secures their access, instead of relying on manual, inconsistent configuration.
 ## Video Walkthrough
 [Add your video walkthrough link placeholder here. You will record this tomorrow and update this link so visitors can see a live demonstration of your lab environment.]
 
@@ -26,8 +26,7 @@
 
 ## Key Accomplishments
 * Built NMG.com domain from scratch
-* [Add your second key accomplishment here]
-* [Add your third key accomplishment here]
-
+* Provisioned 15-20 user accounts using the OU/group model, then diagnosed and resolved a live access ticket (NMG-0047) by identifying incorrect OU placement and missing security group membership as root cause
+* Designed a 4-OU structure with matching security groups, replacing an unstructured, manually-managed environment
 
 
