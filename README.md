@@ -7,7 +7,7 @@ Northstar Medical Group is a fictional fast-growing healthcare company that dele
 ## Solution Overview
 I built a basic employee onboarding pipeline in Active Directory to replace the ad-hoc process. This started with creating a new domain (NMG.com) as the foundation, then designing an organizational unit structure that separated departments so access could be managed by group rather than by individual. I set up an RBAC matrix using security groups tied to each OU, ensuring users were granted access only according to their role, nothing more and nothing less. To validate the model, I simulated a mock support ticket where a user had been provisioned the wrong level of access, then used the OU and group structure to trace the issue back to its root cause and correct it. The result is a provisioning process where adding a user to the right OU and group automatically secures their access, instead of relying on manual, inconsistent configuration.
 ## Video Walkthrough
-[Add your video walkthrough link placeholder here. You will record this tomorrow and update this link so visitors can see a live demonstration of your lab environment.]
+https://www.youtube.com/watch?v=EBR0ddXkFZg
 
 ## Tools Used
 * Windows Server
